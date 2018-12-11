@@ -7,7 +7,7 @@ const {User} = require('./../../models/user');
 const userOneId = new ObjectID();
 const userTwoId = new ObjectID();
 const users = [{
-  _id: new ObjectID(),
+  _id: userOneId,
   email: 'yura@example.com',
   password: 'userOnePass',
   tokens: [{
@@ -34,7 +34,7 @@ const populateTodos = (done) => {
   Todo.remove({}).then(() => {
     return Todo.insertMany(todos);
   }).then(() => done());
-}
+};
 
 const populateUsers = (done) => {
   User.remove({}).then(() => {
