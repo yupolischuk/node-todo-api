@@ -16,7 +16,7 @@ var hashedPassword = '$2a$10$cXPF1BQeYfGQXACYyJAAMuWzL/pxCxPKX290UMNiuBTYwSFWfSG
 
 bcrypt.compare(password, hashedPassword, (err, res) => {
   console.log(res);
-})
+});
 
 // var data = {
 //   id: 10
